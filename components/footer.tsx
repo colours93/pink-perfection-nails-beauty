@@ -27,17 +27,17 @@ export function Footer() {
           {/* Contact Details */}
           <div className="space-y-3 mb-8">
             <div className="flex items-center justify-center gap-3 text-sm text-muted-foreground">
-              <MapPin className="w-4 h-4 text-pink-500 flex-shrink-0" />
+              <MapPin className="w-4 h-4 text-pink-500 shrink-0" />
               <span className="font-serif">64 Grampians Circuit, Yarrabilba QLD 4207</span>
             </div>
             <div className="flex items-center justify-center gap-3 text-sm text-muted-foreground">
-              <Phone className="w-4 h-4 text-pink-500 flex-shrink-0" />
+              <Phone className="w-4 h-4 text-pink-500 shrink-0" />
               <a href="tel:+61400113407" className="hover:text-pink-500 transition-colors font-serif">
                 0400 113 407
               </a>
             </div>
             <div className="flex items-center justify-center gap-3 text-sm text-muted-foreground">
-              <Mail className="w-4 h-4 text-pink-500 flex-shrink-0" />
+              <Mail className="w-4 h-4 text-pink-500 shrink-0" />
               <a href="mailto:carolynbrow318@yahoo.com.au" className="hover:text-pink-500 transition-colors break-all font-serif">
                 carolynbrow318@yahoo.com.au
               </a>
@@ -45,7 +45,7 @@ export function Footer() {
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex gap-3 justify-center">
+          <div className="flex gap-3 justify-center mb-6">
             {socialLinks.map((social) => (
               <motion.a
                 key={social.name}
@@ -58,6 +58,21 @@ export function Footer() {
                 <span className="sr-only">{social.name}</span>
               </motion.a>
             ))}
+          </div>
+
+          {/* Developer Credit */}
+          <div className="pt-6 border-t border-pink-100">
+            <p className="text-xs text-muted-foreground">
+              Website by{" "}
+              <a
+                href="https://github.com/colours93"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-pink-500 hover:text-pink-600 transition-colors font-medium"
+              >
+                @colours93
+              </a>
+            </p>
           </div>
         </motion.div>
       </div>
