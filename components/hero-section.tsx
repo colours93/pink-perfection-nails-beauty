@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
-import Image from "next/image"
 import { Sparkles, Clock, MapPin } from "lucide-react" // Updated icons for beauty salon
 import { Reveal } from "./reveal"
 import { BlurPanel } from "./blur-panel"
@@ -51,14 +50,15 @@ export function HeroSection() {
         animate={{ scale: 1 }}
         transition={{ duration: 1.2, ease: [0.21, 0.47, 0.32, 0.98] }}
       >
-        <Image
-          src="/luxury-spa-beauty-salon-with-soft-pink-lighting--e.jpg"
-          alt="Pink Perfection Nails & Beauty - Luxury home salon"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/bamboonails.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-pink-900/40 via-rose-900/30 to-pink-950/50" />
       </motion.div>
 

@@ -17,6 +17,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from '@/components/ui/sheet'
+import { VisuallyHidden } from '@/components/ui/visually-hidden'
 import { Skeleton } from '@/components/ui/skeleton'
 import {
   Tooltip,
@@ -195,9 +196,11 @@ function Sidebar({
           }
           side={side}
         >
-          <SheetHeader className="sr-only">
-            <SheetTitle>Sidebar</SheetTitle>
-            <SheetDescription>Displays the mobile sidebar.</SheetDescription>
+          <SheetHeader>
+            <VisuallyHidden>
+              <SheetTitle>Sidebar</SheetTitle>
+              <SheetDescription>Displays the mobile sidebar.</SheetDescription>
+            </VisuallyHidden>
           </SheetHeader>
           <div className="flex h-full w-full flex-col">{children}</div>
         </SheetContent>
